@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'key'
+            keyPassword 'android'
+            storeFile file('F:/android_key.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.pingstart.sample"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 10004
+        versionName "1.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.google.android.gms:play-services-ads:9.0.2'
+    compile 'com.mopub:mopub-sdk:4.5.0'
+    compile 'com.facebook.android:audience-network-sdk:4.22.1'
+}

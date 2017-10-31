@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show_banner_ad1"
+            style="@style/CommonButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="自有广告BANNER" />
+
+
+        <Button
+            android:id="@+id/show_banner_ad2"
+            style="@style/CommonButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FACEBOOK广告BANNER" />
+
+        <Button
+            android:id="@+id/show_banner_ad3"
+            style="@style/CommonButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="ADMOB广告BANNER" />
+
+        <Button
+            android:id="@+id/show_banner_ad4"
+            style="@style/CommonButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="MOPUB广告BANNER" />
+
+        <Button
+            android:id="@+id/show_inter_ad1"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="自有广告inter" />
+
+        <Button
+            android:id="@+id/show_inter_ad2"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FACEBOOK广告inter" />
+
+        <Button
+            android:id="@+id/show_inter_ad3"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AdMob广告inter" />
+
+        <Button
+            android:id="@+id/show_inter_ad4"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Vungle广告inter" />
+
+        <Button
+            android:id="@+id/show_inter_ad5"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="AdColony广告inter" />
+
+        <Button
+            android:id="@+id/show_video_ad1"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Video广告" />
+
+
+
+        <!--<Button-->
+        <!--android:id="@+id/show_search_ad"-->
+        <!--style="@style/CommonButtonTheme"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="28dp"-->
+        <!--android:text="SHOW Search" />-->
+
+        <!--<Button-->
+        <!--android:id="@+id/show_video_ad"-->
+        <!--style="@style/CommonButtonTheme"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="28dp"-->
+        <!--android:text="SHOW Video" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:descendantFocusability="blocksDescendants"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show_native_ad1"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="自有广告NATIVE" />
+
+        <Button
+            android:id="@+id/show_native_ad2"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="FACEBOOK广告NATIVE" />
+
+        <Button
+            android:id="@+id/show_native_ad3"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="CustomNetWork广告NATIVE" />
+
+        <Button
+            android:id="@+id/show_multi_ad"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SHOW MULTI" />
+
+        <Button
+            android:id="@+id/show_pingstart_adswall"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="SHOW ADSWALL" />
+
+        <Button
+            android:background="@drawable/button_common_selector"
+            android:id="@+id/show_pingstart_apps"
+            style="@style/CommonButtonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="广告初始化V1接口" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
