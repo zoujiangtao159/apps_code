@@ -28,6 +28,16 @@ public class AdsWallActivity extends AppCompatActivity {
         mPingStartAdsWall = new PingStartAdsWall(this, "1002620");
         mPingStartAdsWall.setAdListener(new AdsWallListener() {
             @Override
+            public void onAdClosed() {
+
+            }
+
+            @Override
+            public void onAdLoaded() {
+                mPingStartAdsWall.show();
+            }
+
+            @Override
             public void onAdError(String s) {
 
             }
@@ -37,11 +47,6 @@ public class AdsWallActivity extends AppCompatActivity {
 
             }
 
-            @Override
-            public void onAdLoaded(View view) {
-                mContainer.removeAllViews();
-                mContainer.addView(view);
-            }
         });
         mPingStartAdsWall.loadAd();
     }
