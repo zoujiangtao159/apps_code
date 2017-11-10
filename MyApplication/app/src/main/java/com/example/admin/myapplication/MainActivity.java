@@ -1,5 +1,6 @@
 package com.example.admin.myapplication;
 
+import android.app.Application;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -8,12 +9,13 @@ import android.os.Bundle;
 import android.util.Log;
 
 
+import com.appsflyer.AppsFlyerConversionListener;
+import com.appsflyer.AppsFlyerLib;
 import com.appsflyer.Installation;
-import com.appsflyer.ServerParameters;
 
 import java.lang.ref.WeakReference;
+import java.util.Map;
 
-import static com.appsflyer.Installation.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,11 +28,7 @@ public class MainActivity extends AppCompatActivity {
         String id = Installation.id(new WeakReference<Context>(this));
         Log.d(TAG, "onCreate:::: " + id);
 
-
-
-        Intent intent = new Intent();
-        intent.setComponent(new ComponentName("zeus.net.com .zeus", "com.zeus.ads.service.OptimizeService"));
-        startService(intent);
-
     }
+
+
 }

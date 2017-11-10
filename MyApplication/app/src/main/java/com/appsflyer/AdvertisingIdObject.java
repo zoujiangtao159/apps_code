@@ -4,7 +4,7 @@ package com.appsflyer;
  * Created by shacharaharon on 30/01/2017.
  */
 
-class AdvertisingIdObject {
+public class AdvertisingIdObject {
 
     private static final String SEPARATOR = ",";
 
@@ -12,7 +12,7 @@ class AdvertisingIdObject {
     private String advertisingId;
     private boolean limitAdTracking;
 
-    AdvertisingIdObject(IdType type, String advertisingId, boolean limitAdTracking) {
+    public AdvertisingIdObject(IdType type, String advertisingId, boolean limitAdTracking) {
         this.type = type;
         this.advertisingId = advertisingId;
         this.limitAdTracking = limitAdTracking;
@@ -64,7 +64,7 @@ class AdvertisingIdObject {
                 && advertisingId != null && advertisingId.length() > 0;
     }
 
-    enum IdType {
+    public enum IdType {
         GOOGLE(0), AMAZON(1);
 
         private int intValue;

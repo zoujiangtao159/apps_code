@@ -12,7 +12,7 @@ import java.util.Map;
  * Created by shacharaharon on 29/01/2017.
  */
 
-class AdvertisingIdUtil {
+public class AdvertisingIdUtil {
 
     public static final String AMAZON_MANUFACTURER = "Amazon";
     private static final String AMAZON_SETTING_LIMIT_AD_TRACKING = "limit_ad_tracking";
@@ -51,7 +51,7 @@ class AdvertisingIdUtil {
         return advertisingIdObject;
     }
 
-    static void addGoogleAID(Context context, Map<String, Object> params) {
+    public static void addGoogleAID(Context context, Map<String, Object> params) {
         AFLogger.afLog("Trying to fetch GAID..");
         com.google.android.gms.ads.identifier.AdvertisingIdClient.Info gpsAdInfo;
         com.appsflyer.AdvertisingIdClient.AdInfo internalAdInfo;

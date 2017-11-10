@@ -18,7 +18,7 @@ import android.os.RemoteException;
 import java.io.IOException;
 import java.util.concurrent.LinkedBlockingQueue;
 
-final class AdvertisingIdClient {
+public final class AdvertisingIdClient {
 
     public static final class AdInfo {
         private final String advertisingId;

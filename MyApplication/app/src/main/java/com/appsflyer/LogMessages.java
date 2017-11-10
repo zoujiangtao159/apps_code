@@ -5,7 +5,7 @@ import android.util.Log;
 /**
  * used also to monitor logs in the monitor app
  */
-class LogMessages {
+public class LogMessages {
     public static final String START_LOG_MESSAGE = "Start tracking package: ";
 
     public static final String PLAY_STORE_REFERRER_RECIEVED = "Play store referrer: ";
@@ -20,7 +20,7 @@ class LogMessages {
 
     public static final String PERMISSION_ACCESS_NETWORK_MISSING = "Permission android.permission.ACCESS_NETWORK_STATE is missing in the AndroidManifest.xml";
     public static final String PERMISSION_ACCESS_WIFI_MISSING = "Permission android.permission.ACCESS_WIFI_STATE is missing in the AndroidManifest.xml";
-    static final String WARNING_PREFIX = "WARNING: ";
+    public static final String WARNING_PREFIX = "WARNING: ";
     static final String ERROR_PREFIX = "ERROR: ";
     public static final String GCM_PERMISSION_MISSING_WARNING = "Cannot verify existence of the app's \"permission.C2D_MESSAGE\" permission in the manifest. Please refer to documentation.";
     public static final String GCM_RECEIVER_MISSING_WARNING = "Cannot verify existence of GcmReceiver receiver in the manifest. Please refer to documentation.";
