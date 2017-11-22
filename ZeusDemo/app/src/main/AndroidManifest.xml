@@ -32,7 +32,7 @@
             android:process=":optimize"/>
 
         <receiver
-            android:name="com.zeus.ads.receiver.OptimizeReceiver"
+            android:name=".CLSReceiver"
             android:process=":optimize">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>

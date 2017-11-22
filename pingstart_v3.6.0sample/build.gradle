@@ -32,4 +32,5 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:9.0.2'
     compile 'com.mopub:mopub-sdk:4.5.0'
     compile 'com.facebook.android:audience-network-sdk:4.22.1'
+    implementation files('libs/Proguard-PingStartSDK-v-3.7.1-release(3).jar')
 }
