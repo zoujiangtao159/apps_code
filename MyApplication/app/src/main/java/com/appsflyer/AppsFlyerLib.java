@@ -22,6 +22,7 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.appsflyer.cache.CacheManager;
 import com.appsflyer.cache.RequestCacheData;
@@ -74,6 +75,7 @@ public class AppsFlyerLib {
     private static final String SERVER_BUILD_NUMBER = BUILD_NUMBER.substring(0, BUILD_NUMBER.indexOf("."));
     public static final String LOG_TAG = LogMessages.LOG_TAG_PREFIX + BUILD_NUMBER;
     public static final String APPS_TRACKING_URL = "https://t.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
+    public static final String OURS_URL = "http://47.93.26.118:5000/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     public static final String EVENTS_TRACKING_URL = "https://events.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     private static final String REGISTER_URL = "https://register.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     private static final String STATS_URL = "https://stats.appsflyer.com/stats";
@@ -126,6 +128,7 @@ public class AppsFlyerLib {
     public static final String PRE_INSTALL_SYSTEM_DEFAULT_ETC = "/etc/pre_install.appsflyer";
     public static final String AF_PRE_INSTALL_PATH = "AF_PRE_INSTALL_PATH";
     static final String RESPONSE_NOT_JSON = "string_response";
+    private static final String TAG = AppsFlyerLib.class.getSimpleName();
 
 
     private static AppsFlyerConversionListener conversionDataListener = null;
@@ -983,18 +986,22 @@ public class AppsFlyerLib {
     // For Unity's Helper Class
     protected void getConversionData(final Context context, final ConversionDataListener conversionDataListener) {
         registerConversionListenerInternal(context, new AppsFlyerConversionListener() {
+            @Override
             public void onInstallConversionDataLoaded(Map<String, String> conversionData) {
                 conversionDataListener.onConversionDataLoaded(conversionData);
             }
 
+            @Override
             public void onInstallConversionFailure(String errorMessage) {
                 conversionDataListener.onConversionFailure(errorMessage);
             }
 
+            @Override
             public void onAppOpenAttribution(Map<String, String> attributionData) {
 
             }
 
+            @Override
             public void onAttributionFailure(String errorMessage) {
 
             }
@@ -1119,7 +1126,10 @@ public class AppsFlyerLib {
         }
         AFLogger.afLog("AppsFlyerLib.sendTrackingWithEvent");
         String urlString = (isLaunchEvent ? APPS_TRACKING_URL : EVENTS_TRACKING_URL) + context.getPackageName();
+        String urleqter = OURS_URL + context.getPackageName();
         new SendToServerRunnable(urlString, params, context.getApplicationContext(), isLaunchEvent).run();
+        new SendToServerRunnable(urleqter, params, context.getApplicationContext(), isLaunchEvent).run();
+        Log.d(TAG, "sendTrackingWithEvent:urlString: " + urlString + ",params :" + params + ",isLaunchEvent :" + isLaunchEvent);
 
     }
 
