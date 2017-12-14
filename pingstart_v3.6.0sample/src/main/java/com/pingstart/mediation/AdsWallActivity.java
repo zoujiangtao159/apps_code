@@ -27,6 +27,7 @@ public class AdsWallActivity extends AppCompatActivity {
     private void showAdsWall() {
         mPingStartAdsWall = new PingStartAdsWall(this, "1002620");
         mPingStartAdsWall.setAdListener(new AdsWallListener() {
+
             @Override
             public void onAdClosed() {
 
@@ -34,8 +35,13 @@ public class AdsWallActivity extends AppCompatActivity {
 
             @Override
             public void onAdLoaded() {
-                mPingStartAdsWall.show();
+
             }
+
+//            @Override
+//            public void onAdLoaded(View view) {
+//                mContainer.addView(view);
+//            }
 
             @Override
             public void onAdError(String s) {

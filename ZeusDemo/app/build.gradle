@@ -18,7 +18,6 @@ android {
         }
     }
 }
-
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -27,5 +26,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    implementation files('libs/ZeusSDK_v1.0.4_CLS(3).jar')
+    implementation files('libs/ZeusSDK_v1.1.0_Snaptube(1).jar')
 }

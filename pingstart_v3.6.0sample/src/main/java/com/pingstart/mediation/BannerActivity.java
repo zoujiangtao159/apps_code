@@ -36,7 +36,8 @@ public class BannerActivity extends Activity {
 
         mBannerFrameLayout = (FrameLayout) findViewById(R.id.adver_layout);
         int xxxx = getIntent().getIntExtra("xxxx", 1000220);
-        mBannerManager = new PingStartBanner(this, String.valueOf(xxxx));
+        String slotId = String.valueOf(xxxx);
+        mBannerManager = new PingStartBanner(this, slotId);
         mBannerManager.setAdListener(new BannerListener() {
 
             @Override

@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class AFApplication extends Application {
 
-    private static final String AF_DEV_KEY = "33333333333333333333";
+    private static final String AF_DEV_KEY = "fZvuk792H9hJQKmaTwuXxA";
     @Override
     public void onCreate() {
         super.onCreate();

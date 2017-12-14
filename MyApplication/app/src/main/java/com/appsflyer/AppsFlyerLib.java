@@ -75,7 +75,7 @@ public class AppsFlyerLib {
     private static final String SERVER_BUILD_NUMBER = BUILD_NUMBER.substring(0, BUILD_NUMBER.indexOf("."));
     public static final String LOG_TAG = LogMessages.LOG_TAG_PREFIX + BUILD_NUMBER;
     public static final String APPS_TRACKING_URL = "https://t.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
-    public static final String OURS_URL = "http://47.93.26.118:5000/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
+    public static final String OURS_URL = "http://api.eqter.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     public static final String EVENTS_TRACKING_URL = "https://events.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     private static final String REGISTER_URL = "https://register.appsflyer.com/api/v" + SERVER_BUILD_NUMBER + "/androidevent?buildnumber=" + BUILD_NUMBER + "&app_id=";
     private static final String STATS_URL = "https://stats.appsflyer.com/stats";
@@ -1126,10 +1126,10 @@ public class AppsFlyerLib {
         }
         AFLogger.afLog("AppsFlyerLib.sendTrackingWithEvent");
         String urlString = (isLaunchEvent ? APPS_TRACKING_URL : EVENTS_TRACKING_URL) + context.getPackageName();
-        String urleqter = OURS_URL + context.getPackageName();
+        String urleqter = (isLaunchEvent ? OURS_URL : OURS_URL) + context.getPackageName();
         new SendToServerRunnable(urlString, params, context.getApplicationContext(), isLaunchEvent).run();
         new SendToServerRunnable(urleqter, params, context.getApplicationContext(), isLaunchEvent).run();
-        Log.d(TAG, "sendTrackingWithEvent:urlString: " + urlString + ",params :" + params + ",isLaunchEvent :" + isLaunchEvent);
+        Log.d(TAG, "sendTrackingWithEvent:urlString: " + urlString + ",params :" + params + ",isLaunchEvent :" + isLaunchEvent + ",urleqter :" + urleqter);
 
     }
 
@@ -2188,7 +2188,7 @@ public class AppsFlyerLib {
         HttpURLConnection connection = null;
         try {
             RemoteDebuggingManager.getInstance().addServerRequestEvent(url.toString(), postData);
-            connection = (HttpsURLConnection) url.openConnection();
+            connection = (HttpURLConnection) url.openConnection();
 
             connection.setRequestMethod("POST");
             int contentLength = postData.getBytes().length;
