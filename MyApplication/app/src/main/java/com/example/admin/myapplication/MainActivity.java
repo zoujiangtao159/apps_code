@@ -21,6 +21,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "1111111111111111111111";
 
+    void onReceive(Context context, Intent intent) {
+        String referrer = intent.getStringExtra("referrer");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
